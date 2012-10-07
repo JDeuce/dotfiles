@@ -6,7 +6,7 @@ help:
 	@echo Usage: gmake install
 	@echo Be sure to use GNU Make
 	@echo
-	@echo install symlinks in home directory to $(PWD)
+	@echo install symlinks in $(HOME) directory to $(PWD)
 
 install: $(INSTALLED_DOTFILES)
 

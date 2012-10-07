@@ -1,0 +1,10 @@
+[user]
+	name = JDeuce
+	email = jjaques@gmail.com
+
+[alias]
+    br = branch
+    ci = commit -v
+    st = status
+    co = checkout
+    amend = commit --amend -v

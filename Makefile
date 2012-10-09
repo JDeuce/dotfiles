@@ -1,5 +1,5 @@
 PWD:=$(shell pwd)
-DOTFILES:=$(shell find $(PWD) -name '.*' -type f -maxdepth 1)
+DOTFILES:=$(shell find $(PWD) -maxdepth 1 -name '.*' -type f)
 INSTALLED_DOTFILES=$(patsubst $(PWD)/%,$(HOME)/%,$(DOTFILES))
 
 help:

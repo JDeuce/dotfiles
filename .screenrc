@@ -1,0 +1,9 @@
+# let other programs know we're running in Screen
+term screen-256color
+
+# enable title changing
+termcapinfo xterm* 'hs:ts=\E]2;:fs=\007:ds=\E]2;screen\007'
+
+# add the status bar
+#hardstatus alwayslastline
+#hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %m-%d %{W}%c %{g}]'

@@ -1,4 +1,8 @@
 export TZ=/usr/share/zoneinfo/America/Winnipeg
+export MM_CHARSET=utf8
+export LANG=en_CA.UTF-8
+export LC_ALL=en_CA.UTF-8
+export LC_COLLATE=C
 
 if ( which vim > /dev/null )
 then
@@ -26,3 +30,4 @@ fi
 export CLICOLOR='yes'
 
 alias grep='grep --color'
+alias screen='screen -U'

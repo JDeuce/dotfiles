@@ -10,5 +10,13 @@ help:
 
 install: $(INSTALLED_DOTFILES)
 
+
+forceclean:
+	@for file in $(INSTALLED_DOTFILES) ; do \
+		rm -fv $$file ; \
+	done
+
+forceinstall: forceclean install
+
 $(HOME)/.%:
 	ln -s $(PWD)/$(shell basename $@) $@

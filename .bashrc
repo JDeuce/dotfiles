@@ -31,3 +31,11 @@ export CLICOLOR='yes'
 
 alias grep='grep --color'
 alias screen='screen -U'
+
+if [ -f ~/.git-completion.bash ]; then
+    . ~/.git-completion.bash
+    PS1="${PS1}\$(__git_ps1 ' [\[\e[34;1m\]%s\[\e[0m\]]')"
+    GIT_PS1_SHOWDIRTYSTATE=true
+    GIT_PS1_SHOWUNTRACKEDFILES=true
+fi
+

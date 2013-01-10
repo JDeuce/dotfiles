@@ -19,18 +19,14 @@ shopt -s checkwinsize
 
 if [ $EUID -ne 0 ]
 then
-    # green PS1 when not running as root
-    PS1='\[\e[1;32m\][\u@\h \W]\$\[\e[0m\] '
+    # green username when not running as root
+    PS1='\[\033[01;32m\]'
 else
-    # red PS1 when running as root
-    PS1='\[\e[1;31m\][\u@\h \W]\$\[\e[0m\] '
+    # red username as root
+    PS1='\[\033[01;31m\]'
 fi
 
-# adds color to ls in FreeBSD
-export CLICOLOR='yes'
-
-alias grep='grep --color'
-alias screen='screen -U'
+PS1=$PS1'\u \033[00m\]\[\033[01;34m\]\w\[\033[00m\]'
 
 if [ -f ~/.git-completion.bash ]; then
     . ~/.git-completion.bash
@@ -39,3 +35,10 @@ if [ -f ~/.git-completion.bash ]; then
     GIT_PS1_SHOWUNTRACKEDFILES=true
 fi
 
+PS1="${PS1} \n\$ "
+
+# adds color to ls in FreeBSD
+export CLICOLOR='yes'
+
+alias grep='grep --color'
+alias screen='screen -U'

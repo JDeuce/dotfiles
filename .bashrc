@@ -42,3 +42,5 @@ export CLICOLOR='yes'
 
 alias grep='grep --color'
 alias screen='screen -U'
+
+export PYTHONSTARTUP=~/.pythonrc.py

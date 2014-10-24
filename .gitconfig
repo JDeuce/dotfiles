@@ -3,13 +3,50 @@
 	email = jjaques@gmail.com
 
 [alias]
-    br = branch
-    ci = commit -v
-    st = status
-    co = checkout
-    amend = commit --amend -v
-    ls = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
+        co = checkout
+        ci = commit -v
+        qci = commit -v --no-verify
+        br = branch
+        st = status
+        amend =  commit -v --amend
+        fix = commit --amend --no-edit
+        commit = commit -v
+        qcommit = commit -v --no-verify
+        ls = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
+        grepc  = grep --color=always
+
+
+[branch]
+        autosetupmerge = true
+
+[color]
+        branch = auto
+        diff = auto
+        status = auto
+
+[color "diff"]
+        commit = green
+        frag = green
+        meta = green
+        new = cyan
+        old = red
+        plain = white
+        whitespace = yellow yellow
+
+[color "status"]
+        added = cyan
+        changed = yellow
+        untracked = red
 
 [core]
         editor = vim
         pager = less -FXRS
+
+[push]
+	default = simple
+
+[merge]
+	tool = vimdiff
+
+[rerere]
+	enabled = true

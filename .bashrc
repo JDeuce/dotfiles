@@ -44,3 +44,9 @@ alias grep='grep --color'
 alias screen='screen -U'
 
 export PYTHONSTARTUP=~/.pythonrc.py
+
+eval "$(thefuck --alias)"
+
+if [ -f ~/.bashrc-local ]; then
+    . ~/.bashrc-local
+fi

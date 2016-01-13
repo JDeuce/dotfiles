@@ -14,6 +14,7 @@
         qcommit = commit -v --no-verify
         ls = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
         grepc  = grep --color=always
+        olog = log --pretty=oneline
 
 
 [branch]

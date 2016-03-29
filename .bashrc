@@ -43,9 +43,12 @@ export CLICOLOR='yes'
 alias grep='grep --color'
 alias screen='screen -U'
 
+alias rehash='hash -r'
+
 export PYTHONSTARTUP=~/.pythonrc.py
 
-eval "$(thefuck --alias)"
+eval "$(thefuck --alias)" 2>&1
+
 
 if [ -f ~/.bashrc-local ]; then
     . ~/.bashrc-local

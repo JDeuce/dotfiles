@@ -7,6 +7,7 @@
         ci = commit -v
         qci = commit -v --no-verify
         br = branch
+        brc = checkout -b
         st = status
         amend =  commit -v --amend
         fix = commit --amend --no-edit

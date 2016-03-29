@@ -49,6 +49,14 @@ export PYTHONSTARTUP=~/.pythonrc.py
 
 eval "$(thefuck --alias)" 2>&1
 
+markdown_to_man() {
+
+    file=${1--}
+
+    pandoc -s -f markdown -t man $file | man -l -
+}
+alias markman=markdown_to_man
+
 
 if [ -f ~/.bashrc-local ]; then
     . ~/.bashrc-local

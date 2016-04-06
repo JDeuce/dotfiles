@@ -1,9 +1,14 @@
+# If not running interactively, don't do anything
+[ -z "$PS1" ] && return
+
+# TZ/Locale settings
 export TZ=/usr/share/zoneinfo/America/Winnipeg
 export MM_CHARSET=utf8
 export LANG=en_CA.UTF-8
 export LC_ALL=en_CA.UTF-8
 export LC_COLLATE=C
 
+# Editor
 if ( which vim > /dev/null )
 then
     alias vi=vim
@@ -13,6 +18,15 @@ else
     export EDITOR=vi
     export VISUAL=vi
 fi
+
+
+# History settings
+HISTCONTROL=ignoredups:ignorespace
+# append to the history file, don't overwrite it
+shopt -s histappend
+# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+HISTSIZE=1000
+HISTFILESIZE=2000
 
 # fixes problems with long lines overwriting after a win resize
 shopt -s checkwinsize

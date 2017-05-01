@@ -62,8 +62,6 @@ alias cd=pushd
 
 export PYTHONSTARTUP=~/.pythonrc.py
 
-eval "$(thefuck --alias)" 2>&1
-
 markdown_to_man() {
 
     file=${1--}

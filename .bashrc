@@ -67,7 +67,7 @@ markdown_to_man() {
 
     file=${1--}
 
-    pandoc -s -f markdown -t man $file | man -l -
+    pandoc -s -f markdown_github -t man $file | man -l -
 }
 alias markman=markdown_to_man
 

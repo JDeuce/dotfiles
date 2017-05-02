@@ -55,3 +55,7 @@
 
 [huehuehue]
     herp = derp
+
+[include]
+    path = ~/.gitconfig-local
+

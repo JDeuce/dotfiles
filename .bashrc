@@ -71,6 +71,10 @@ markdown_to_man() {
 alias markman=markdown_to_man
 
 
+# use 256 color mode
+alias tmux="tmux -2"
+
+
 if [ -f ~/.bashrc-local ]; then
     . ~/.bashrc-local
 fi

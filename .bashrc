@@ -58,6 +58,12 @@ alias grep='grep --color'
 alias screen='screen -U'
 
 alias rehash='hash -r'
+
+pushd() {
+    command pushd "$@" > /dev/null
+}
+export pushd
+
 alias cd=pushd
 
 export PYTHONSTARTUP=~/.pythonrc.py

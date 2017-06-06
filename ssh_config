@@ -1,0 +1,6 @@
+Host *
+    ServerAliveInterval 60
+    StrictHostKeyChecking ask
+    LocalCommand ~/bin/tmux_ssh.sh "%n"
+    PermitLocalCommand yes
+    GSSAPIAuthentication no

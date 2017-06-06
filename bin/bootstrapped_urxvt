@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# script which can be used as a shell to start urxvt with the bootstrap script
+
+exec urxvt -e ~/bin/terminal-bootstrap.sh
